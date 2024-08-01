@@ -1,0 +1,21 @@
+
+### 2. `.gitignore`
+
+O arquivo `.gitignore` especifica quais arquivos ou diretórios o Git deve ignorar. Para um projeto Python simples, você pode incluir arquivos e diretórios comuns que não precisam ser rastreados.
+
+**Exemplo de `.gitignore`:**
+
+```gitignore
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Environment files
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
