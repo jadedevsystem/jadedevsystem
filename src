@@ -1,0 +1,38 @@
+def calculadora():
+    while True:
+        # Recebendo a operação do usuário
+        operacao = input("Digite a operação (+,-,*,/) ou 'sair' para encerrar: ")
+
+        # Verifica se o usuário deseja sair
+        if operacao.lower() == 'sair':
+            print("Saindo da calculadora. Até mais!")
+            break
+        
+        # Recebendo os números do usuário após selecionar a operação
+        try:
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
+        except ValueError:
+            print("Entrada inválida. Por favor, insira números válidos.")
+            continue
+
+        # Realizando a operação conforme a escolha do usuário
+        if operacao == "+":
+            resultado = num1 + num2
+        elif operacao == "-":
+            resultado = num1 - num2
+        elif operacao == "*":
+            resultado = num1 * num2
+        elif operacao == "/":
+            if num2 != 0:  # Verifica se o denominador não é zero
+                resultado = num1 / num2
+            else:
+                resultado = "Erro: Divisão por zero"
+        else:
+            resultado = "Operação inválida"
+
+        # Exibindo o resultado
+        print("Resultado:", resultado)
+
+# Chamando a função
+calculadora()
